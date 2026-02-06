@@ -1,6 +1,40 @@
+@use "variables" as v;
+
 /*****************************
  * CV shared styles
  *****************************/
+
+// CV page specific styles - make PDF viewer full width
+body .container[role="main"] {
+  &.cv-page {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.post.cv-page {
+  margin: 0;
+  padding: 0;
+}
+
+// CV page specific styles - align PDF viewer with navbar container width
+
+.cv-pdf-viewer-container {
+  width: 137%;
+  height: calc(100vh - 120px);
+  min-height: 600px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  background-color: var(--global-bg-color);
+}
+
+.cv-pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
 div.container-link-button {
   margin-right: 0.5rem;

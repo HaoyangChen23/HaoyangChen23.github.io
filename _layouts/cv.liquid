@@ -1,6 +1,19 @@
 ---
 layout: default
 ---
+<style>
+  body .container[role="main"] {
+    margin-top: 0 !important;
+  }
+  .post {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .cv-pdf-viewer-container {
+    margin-left: -265px;
+    padding-left: 35px;
+  }
+</style>
 {% comment %}
   Unified CV layout that handles both RenderCV (YAML) and JSONResume (JSON) formats
   - If page.cv_format is set, it determines which format to render:
@@ -14,31 +27,38 @@ layout: default
 {% endcomment %}
 
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {{ page.title }}
-      {% if page.cv_pdf %}
-        <a
-          {% if page.cv_pdf contains '://' %}
-            href="{{ page.cv_pdf }}"
-          {% else %}
-            href="{{ page.cv_pdf | relative_url }}"
-          {% endif %}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="float-right"
-        >
-          <i class="fa-solid fa-file-pdf"></i>
-        </a>
-      {% endif %}
-    </h1>
-    {% if page.description %}
-      <p class="post-description">{{ page.description }}</p>
-    {% endif %}
-  </header>
-
   <article>
+    {% if page.embed_pdf and page.cv_pdf %}
+      <!-- Embedded PDF Viewer -->
+      <div class="cv-pdf-viewer-container">
+        <iframe
+          {% if page.cv_pdf contains '://' %}
+            src="{{ page.cv_pdf }}"
+          {% else %}
+            src="{{ page.cv_pdf | relative_url }}#toolbar=1&navpanes=0&scrollbar=1"
+          {% endif %}
+          class="cv-pdf-viewer"
+          frameborder="0"
+          allowfullscreen
+        >
+          <p>Your browser does not support PDFs. 
+            <a
+              {% if page.cv_pdf contains '://' %}
+                href="{{ page.cv_pdf }}"
+              {% else %}
+                href="{{ page.cv_pdf | relative_url }}"
+              {% endif %}
+              target="_blank"
+            >Download the PDF</a> instead.
+          </p>
+        </iframe>
+      </div>
+    {% endif %}
+    
     <div class="cv">
+      {% if page.show_cv_content == false %}
+        <!-- CV content is hidden, only PDF viewer is shown -->
+      {% else %}
       {% comment %} Determine which CV format to render {% endcomment %}
       {% assign render_rendercv = false %}
       {% assign render_jsonresume = false %}
@@ -386,6 +406,7 @@ layout: default
 
       {% else %}
         <p>No CV data found. Please configure either RenderCV (cv.yml) or JSONResume (resume.json) data.</p>
+      {% endif %}
       {% endif %}
     </div>
   </article>
