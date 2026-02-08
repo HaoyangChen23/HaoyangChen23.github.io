@@ -6,7 +6,7 @@ nav: true
 nav_order: 4
 cv_pdf: /assets/pdf/CV_HaoyangChen.pdf # you can also use external links here
 cv_format: rendercv # options: rendercv, jsonresume
-description: 
+description:
 toc:
   sidebar: left
 show_cv_content: false # Set to false to hide CV content, only show PDF viewer
