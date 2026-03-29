@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Joined the research group, working with [Prof. Caiwen Ding](https://caiwending.github.io/web/home.html) and [Shiyang Li](https://nku-yang.github.io/) on MLsys-related research.
+Joined the [UMN APEX Lab](https://caiwending.github.io/), working with [Prof. Caiwen Ding](https://caiwending.github.io/) and [Shiyang Li](https://nku-yang.github.io/) on MLsys-related research.
