@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: CS Undergrad @ UMN Twin Cities
+subtitle: Research Assistant @ UMN APEX Lab
 
 profile:
   align: left
@@ -23,6 +23,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm Haoyang Chen, a Computer Science undergraduate student in the Department of Computer Science & Engineering (CSE) at the University of Minnesota, Twin Cities. I'm expected to graduate in Spring 2026. I work with [Prof. Caiwen Ding](https://caiwending.github.io/), [Shiyang Li](https://nku-yang.github.io/), and [Yuebo Luo](https://www.linkedin.com/in/yuebo-luo-0513b0241/en) on MLsys-related research. I'm also discussing with [Guangyan (George) Sun](https://www.guangyan.me/) on exploring MLsys perspectives for optimizing Diffusion Models for Video Generation.
+I'm Haoyang Chen, a Research Assistant at the [UMN APEX Lab](https://caiwending.github.io/), advised by [Prof. Caiwen Ding](https://caiwending.github.io/). I received my B.S. in Computer Science from the University of Minnesota, Twin Cities in May 2026. I also work closely with [Shiyang Li](https://nku-yang.github.io/) and [Yuebo Luo](https://www.linkedin.com/in/yuebo-luo-0513b0241/en).
 
-I'm actively seeking in-person research assistant (RA) opportunities in the United States until August 2026.
+My research centers on world models and World Action Models (WAMs) for embodied AI, from two angles:
+
+- **Long-horizon consistency:** explicit, inspectable memory and state, such as a panoramic canvas that lets video world models return to previously visited viewpoints, and code-space task memory for robot manipulation policies.
+- **Efficient systems:** GPU/CUDA performance, training runtimes, and real-time WAM inference. I contribute to [vLLM-Omni](https://github.com/vllm-project/vllm-omni) on WAM inference optimization.
+
+I'm applying to PhD programs for Fall 2027.
