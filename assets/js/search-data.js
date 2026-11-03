@@ -53,11 +53,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-joined-the-department-of-computer-science-amp-amp-engineering-at-university-of-minnesota-twin-cities-as-a-cs-undergraduate-student",
-          title: 'Joined the Department of Computer Science &amp;amp;amp; Engineering at University of Minnesota Twin...',
-          description: "",
-          section: "News",},{id: "news-joined-the-umn-apex-lab-working-with-prof-caiwen-ding-and-shiyang-li-on-mlsys-related-research",
+            },},{id: "news-joined-the-umn-apex-lab-working-with-prof-caiwen-ding-and-shiyang-li-on-mlsys-related-research",
           title: 'Joined the UMN APEX Lab, working with Prof. Caiwen Ding and Shiyang Li...',
+          description: "",
+          section: "News",},{id: "news-graduated-from-the-university-of-minnesota-twin-cities-with-a-b-s-in-computer-science",
+          title: 'Graduated from the University of Minnesota, Twin Cities with a B.S. in Computer...',
           description: "",
           section: "News",},{id: "news-our-paper-cudabeaver-benchmarking-llm-based-automated-cuda-debugging-is-accepted-at-neurips-2026-evaluations-and-datasets-track-as-a-poster",
           title: 'Our paper CUDABeaver: Benchmarking LLM-Based Automated CUDA Debugging is accepted at NeurIPS 2026...',
